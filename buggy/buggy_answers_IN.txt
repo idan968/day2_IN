@@ -3,3 +3,5 @@ Problems with main.py
 	Resets round count after every game
 	You cannot press "no"
 	The correct answer is also set to 5 even though it is not the case
+	
+In runner.py I changed line 61 to "exit()" so it will close the script when pressing "no"

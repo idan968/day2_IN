@@ -1,8 +1,8 @@
 from .die import Die
-from .utils import i_just_throw_an_exception
+from .utils import UnnecessaryError
 
 class GameRunner:
-
+    
     def __init__(self):
         self.dice = Die.create_dice(5)
         self.reset()
@@ -17,11 +17,12 @@ class GameRunner:
         for die in self.dice:
             total += 1
         return total
-
+    #import ipdb; ipdb.set_trace()
     @classmethod
     def run(cls):
         # Probably counts wins or something.
         # Great variable name, 10/10.
+        #import ipdb; ipdb.set_trace()
         c = 0
         while True:
             runner = cls()
@@ -54,7 +55,7 @@ class GameRunner:
 
             prompt = input("Would you like to play again?[Y/n]: ")
 
-            if prompt == 'y' or prompt == '':
+            if prompt == 'y' or prompt == 'Y':
                 continue
             else:
-                i_just_throw_an_exception()
+                exit()
